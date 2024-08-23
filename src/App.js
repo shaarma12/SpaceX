@@ -1,9 +1,12 @@
 import React from 'react'
 import Sidebar from './Components/Sidebar'
 import { Outlet } from 'react-router-dom'
+import { Provider } from "react-redux";
+import appStore from './utils/appStore';
 
 const App = () => {
   return (
+    <Provider store={appStore}>
     <div className='bg-[#EFEFEF] h-screen flex justify-center items-center'>
         <div className='h-[40rem] w-[80rem] flex relative drop-shadow-2xl'>
         <Sidebar/>
@@ -11,7 +14,8 @@ const App = () => {
           <Outlet/>
         </div>
         </div>
-    </div>
+      </div>
+      </Provider>
   )
 }
 
