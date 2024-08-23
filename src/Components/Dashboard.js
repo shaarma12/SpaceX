@@ -1,8 +1,20 @@
 import React from 'react'
+import LaunchFaciities from './LaunchFaciities'
+import StarLink from './StarLink'
+import Launch from './Launch'
 
 function Dashboard() {
     return (
-        <p className='text-red-600'>Hi this is my Dashboard</p>
+        <div className='overflow-y-scroll h-full flex justify-center'>
+            <div>
+                <Launch/>
+                <Launch/>
+            </div>
+            <div>
+                <LaunchFaciities />
+                <StarLink/>
+            </div>
+        </div>
     )
 }
 

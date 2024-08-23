@@ -1,0 +1,1 @@
+export const LOGO_IMG = "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/SpaceX_logo_black.svg/1920px-SpaceX_logo_black.svg.png";
