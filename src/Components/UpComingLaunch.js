@@ -11,7 +11,6 @@ const UpComingLaunch = () => {
     const data = await fetch(UPCOMING_API);
     const JsonData = await data.json();
     setupcomingData(JsonData);
-    console.log(upComingData);
   }
   return (
     <div className='w-[26rem] mt-4 h-[21rem] ml-5 px-6 bg-[#00000080] rounded-2xl drop-shadow-2xl'>
