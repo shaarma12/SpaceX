@@ -54,4 +54,6 @@ export const DUMMY_FACILITIES_SHORT = [
     },
 ];
 export const UPCOMING_API = "https://api.spacexdata.com/v4/launches/next";
+export const PREVIOUS_API = "https://api.spacexdata.com/v4/launches/latest";
 export const ROCKETNAME_API = "https://api.spacexdata.com/v4/rockets/";
+export const LAUNCHPADNAME_API = "https://api.spacexdata.com/v4/launchpads/";
