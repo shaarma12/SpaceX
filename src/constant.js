@@ -53,3 +53,5 @@ export const DUMMY_FACILITIES_SHORT = [
         wind: "5 m/s"
     },
 ];
+export const UPCOMING_API = "https://api.spacexdata.com/v4/launches/next";
+export const ROCKETNAME_API = "https://api.spacexdata.com/v4/rockets/";
