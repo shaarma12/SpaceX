@@ -2,26 +2,25 @@ import React from 'react';
 import useRocket from '../utils/useRocket';
 
 const LaunchCard = ({ data }) => {
-    // console.log("Rocket ID", rocketId); // Ensure rocket ID is available
-
-    const { rocketname } = useRocket(data?.rocket); 
-
-    console.log("Rocket Name", rocketname); // Check if the rocket name is fetched properly
+    const { rocketname } = useRocket(data?.rocket);
 
     const formatDate = (dateStr) => {
-        const date = new Date(dateStr);
+
+        const date = new Date(dateStr); 
         
         if (isNaN(date.getTime())) {
-            return "Invalid date"; 
+            return "Invalid date";
         } else {
             const options = {
-                month: 'short',    
+                month: 'short',
                 day: '2-digit',
                 hour: '2-digit',
                 minute: '2-digit',
-                hour12: true       
+                hour12: true
             };
+
             const formattedDate = new Intl.DateTimeFormat('en-US', options).format(date);
+            
             return formattedDate;
         }
     };
