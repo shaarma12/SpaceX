@@ -1,6 +1,8 @@
 import React from 'react'
 import rocket from "../Images/rocket.png"
+
 const StarLink = () => {
+
   return (
     <div className='text-[#FFFFFF] text-xl w-[26rem] mt-4 h-[21rem] ml-5 bg-[#00000080] rounded-2xl drop-shadow-2xl'>
           <p className='font-bold p-6'>Starlink</p>
