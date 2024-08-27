@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ReactDOM from "react-dom";
 import Overview from './Overview';
 import Photos from './Photos';
 import cross from "../Images/cross.png";
@@ -11,8 +12,10 @@ const RocketInfo = () => {
     const dispatch = useDispatch();
     const [overviewcheck, setOverviewCheck] = useState(true);
     const [photoCheck, setPhotoCheck] = useState(false);
-    return (
-        <div className='flex justify-center w-[71.5rem] h-[35rem] drop-shadow-2xl bg-white p-4 rounded-lg overflow-y-scroll'>
+    return ReactDOM.createPortal(
+        <>
+        <div className='fixed top-0 left-0 right-0 bottom-0 bg-[#00000034] z-30' onClick={()=>dispatch(checkPopup(false))}></div>
+        <div className='flex fixed top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 z-50 justify-center w-[71.5rem] h-[35rem] drop-shadow-2xl bg-white p-4 rounded-2xl overflow-y-scroll'>
             <div className='flex flex-col h-[35.5rem] mt-10'>
                 {photoCheck ? <div className='flex justify-between'><div className='flex gap-6 -ml-[7.5rem] -mt-7'>
                     <p className='text-black text-2xl font-bold'>{name}</p>
@@ -44,8 +47,8 @@ const RocketInfo = () => {
                 {overviewcheck && <Overview description={description} photo={flickr_images[1]} />}
                 {photoCheck && <Photos photos={flickr_images} />}
             </div>
-        </div>
-    );
+            </div>
+            </>,document.querySelector(".popupBehind"));
 };
 
 export default RocketInfo;

@@ -8,7 +8,7 @@ const RocketCard = ({ data }) => {
     const { name, flickr_images, active} = data;
     const dispatch = useDispatch();
     return (
-        <div>
+        <>
             <div className='flex flex-col' onClick={() => {
                 dispatch(checkPopup(true))
                 dispatch(popData(data));
@@ -33,12 +33,8 @@ const RocketCard = ({ data }) => {
                     )}
                 </div>
             </div>
-            {isPopupVisible && (
-                    <div className='fixed top-[17.5rem] left-[16.5rem] transform -translate-x-1/2 -translate-y-1/2 z-20'>
-                    <RocketInfo/>
-                    </div>
-            )}
-        </div>
+            {isPopupVisible && <RocketInfo/>}
+        </>
     );
 };
 
