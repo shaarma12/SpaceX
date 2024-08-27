@@ -5,22 +5,32 @@ import App from './App';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Dashboard from './Components/Dashboard';
 import Rockets from './Components/Rockets';
+import { Provider } from 'react-redux';
+import appStore from './utils/appStore'; 
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
-const appRouter = createBrowserRouter([{
-  path: "/",
-  element: <App />,
-  children: [{
-    path: "/",
-    element: <Dashboard />
-  },
+
+const appRouter = createBrowserRouter([
   {
-    path: "/rockets",
-    element: <Rockets />
-  }]
-}]);
+    path: "/",
+    element: <App />,
+    children: [
+      {
+        path: "/",
+        element: <Dashboard />
+      },
+      {
+        path: "/rockets",
+        element: <Rockets />
+      }
+    ]
+  }
+]);
+
 root.render(
   <React.StrictMode>
-    <RouterProvider router={appRouter}/>
+    <Provider store={appStore}>
+      <RouterProvider router={appRouter} />
+    </Provider>
   </React.StrictMode>
 );
-
