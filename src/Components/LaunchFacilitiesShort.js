@@ -7,8 +7,8 @@ import { checkLaunch } from '../utils/checkSlice';
 const LaunchFaciitiesShort = () => {
     const dispatch = useDispatch();
     return (
-        <div className='w-[26rem] mt-4 h-[21rem] ml-5 px-6 bg-[#00000080] rounded-2xl drop-shadow-2xl'>
-            <p className='font-bold py-6 text-[#FFFFFF] text-xl'>Launch facilities</p>
+        <div className='xl:w-[26rem] w-[20rem] mt-4 xl:h-[21rem] h-[19rem] ml-5 px-6 bg-[#00000080] rounded-2xl drop-shadow-2xl'>
+      <p className='xl:font-bold font-semibold xl:py-6 py-5 text-[#FFFFFF] xl:text-xl text-lg'>Launch facilities</p>
             <div className='flex flex-col gap-8'>
                 {DUMMY_FACILITIES_SHORT.map((i) => {
                     return <LaunchFacilitiesCard key={i?.id} data={i} />

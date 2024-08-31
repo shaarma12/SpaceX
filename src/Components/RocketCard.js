@@ -14,19 +14,19 @@ const RocketCard = ({ data }) => {
                 dispatch(popData(data));
             }}>
                 <p className='text-[#FFFFFF] text-xl font-semibold'>{name}</p>
-                <div className='w-[14.5rem] h-[22rem] overflow-hidden rounded-xl mt-1'>
+                <div className='xl:w-[14.5rem] w-[12rem] xl:h-[22rem] h-[20rem] overflow-hidden rounded-xl mt-1'>
                     <img
                         src={flickr_images[1]}
                         alt='rocket-img'
                         className='object-cover object-center w-full h-full opacity-90 hover:scale-105 transform transition-transform duration-300 hover:cursor-pointer'
                     />
                     {active ? (
-                        <div className='absolute bottom-11 ml-4 opacity-100 flex flex-col bg-[#1D8F2466] p-1 rounded-md bg-opacity-100'>
+                        <div className='absolute xl:bottom-11 bottom-16 ml-4 opacity-100 flex flex-col bg-[#1D8F2466] p-1 rounded-md bg-opacity-100'>
                             <p className='text-[#FFFFFF80] text-xs font-bold -mb-1'>STATUS</p>
                             <p className='text-[#FFFFFF] font-semibold text-lg'>Active</p>
                         </div>
                     ) : (
-                        <div className='absolute bottom-11 ml-4 flex flex-col opacity-100 bg-[#FFB30366] p-1 rounded-md bg-opacity-100'>
+                        <div className='absolute xl:bottom-11 bottom-16 ml-4 flex flex-col opacity-100 bg-[#FFB30366] p-1 rounded-md bg-opacity-100'>
                             <p className='text-[#FFFFFF80] text-xs font-bold -mb-1'>STATUS</p>
                             <p className='text-[#FFFFFF] font-semibold text-lg'>In development</p>
                         </div>
