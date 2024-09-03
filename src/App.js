@@ -1,20 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Sidebar from './Components/Sidebar';
 import { Outlet } from 'react-router-dom';
-
+import { LOGO_IMG } from './constant';
+import menu from "./Images/menu.png";
 const App = () => {
-
+  const [sidebar, setSidebar] = useState(false);
   return (
     <>
-    <div className='xl:bg-[#EFEFEF] lg:bg-[#EFEFEF]  h-screen flex justify-center items-center'>
-        <div className='xl:h-[40rem] h-[35rem] w-[58rem] xl:w-[80rem] flex relative drop-shadow-2xl'>
-            <Sidebar />
+      {sidebar && <div className='fixed top-0 left-0 right-0 bottom-0 bg-[#00000034] z-30' onClick={() => setSidebar(false)}></div>}
+      <div className='xl:bg-[#EFEFEF] lg:bg-[#EFEFEF] md:bg-gray-600 h-screen xl:flex xl:justify-center xl:items-center lg:flex lg:justify-center lg:items-center md:flex md:flex-col md:p-8'>
+        <div className='flex xl:hidden lg:hidden justify-between'>
+          <div>
+            <img src={LOGO_IMG} alt="logo" className='h-7 m-auto' />
+            <p className='font-thin text-sm tracking-[0.45em] mt-1 text-[#FFFFFF]'>LIVE-INFO</p>
+          </div>
+          <div>
+            {!sidebar&&<img src={menu} alt='menu' className='w-8' onClick={() => {
+              setSidebar(true);
+            }} />}
+          </div>
+        </div>
+        <div className='xl:h-[40rem] lg:h-[35rem] md:h-[39.5rem] w-[58rem] xl:w-[80rem] flex relative drop-shadow-2xl'>
+          <Sidebar toggleState={sidebar} />
           <div className='xl:w-[80%] lg:w-[80%] lg:bg-[url("https://live.staticflickr.com/7706/26751237322_5a52540ea3_h.jpg")] bg-center bg-120 rounded-tr-2xl rounded-br-2xl'>
             <Outlet />
           </div>
         </div>
       </div>
-      </>
+    </>
   )
 }
 

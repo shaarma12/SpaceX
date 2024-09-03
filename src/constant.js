@@ -1,4 +1,5 @@
 export const LOGO_IMG = "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/SpaceX_logo_black.svg/1920px-SpaceX_logo_black.svg.png";
+export const LOGO_IMG_WHITE = "https://tl.vhv.rs/dpng/s/453-4533340_spacex-logo-png-white-spacex-black-logo-png.png";
 export const DUMMY_FACILITIES = [
     {
         id: 1,
