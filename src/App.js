@@ -4,7 +4,7 @@ import { Outlet } from 'react-router-dom';
 import { LOGO_IMG } from './constant';
 import menu from "./Images/menu.png";
 import SidebarsMed from './Components/SidebarsMed';
-
+import wcross from "./Images/wcross.png"
 const App = () => {
   const [sidebar, setSidebar] = useState(false);
   
@@ -13,10 +13,13 @@ const App = () => {
       {sidebar && (
         <div>
         <div 
-          className='fixed top-0 left-0 right-0 bottom-0 bg-[#00000034] z-30' 
+          className='fixed top-0 left-0 right-0 bottom-0 bg-[#00000034] z-10' 
           onClick={() => setSidebar(false)}
           ></div>
-          <SidebarsMed toggleFn={()=>setSidebar()} />
+          <div className='flex'>
+           <img src={wcross} alt='cross' className='absolute left-[32rem] top-8' />
+            <SidebarsMed toggleFn={() => setSidebar()} />
+            </div>
           </div>
       )}
 
