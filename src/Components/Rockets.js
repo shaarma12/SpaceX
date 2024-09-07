@@ -15,8 +15,8 @@ const Rockets = () => {
   };
 
   return (
-    <div className='flex justify-center mt-10'>
-      <div className='bg-[#00000080] rounded-2xl drop-shadow-2xl xl:w-[51rem] w-[42rem] xl:h-[28rem] h-[25rem] flex justify-evenly items-center'>
+    <div className='flex justify-center xl:mt-10 lg:mt-10 md:mt-5'>
+      <div className='bg-[#00000080] rounded-2xl drop-shadow-2xl xl:w-[51rem] lg:w-[42rem] md:w-[43rem] xl:h-[28rem] lg:h-[25rem] md:h-[28rem] flex justify-evenly items-center'>
         {rocketValue.slice(1).map((i) => {
           return <RocketCard key={i?.id} data={i} />
         })

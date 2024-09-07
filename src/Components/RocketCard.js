@@ -14,7 +14,7 @@ const RocketCard = ({ data }) => {
                 dispatch(popData(data));
             }}>
                 <p className='text-[#FFFFFF] text-xl font-semibold'>{name}</p>
-                <div className='xl:w-[14.5rem] w-[12rem] xl:h-[22rem] h-[20rem] overflow-hidden rounded-xl mt-1'>
+                <div className='xl:w-[14.5rem] w-[12rem] xl:h-[22rem] lg:h-[20rem] md:h-[22rem] overflow-hidden rounded-xl mt-1'>
                     <img
                         src={flickr_images[1]}
                         alt='rocket-img'
