@@ -36,47 +36,47 @@ const LaunchCard = ({ data }) => {
             <div className='flex flex-col'>
                 <div>
                     <p className='text-[#FFFFFF80] text-sm xl:font-medium'>MISSION NAME</p>
-                    <p className='-mt-1 text-[#FFFFFF] xl:text-lg xl:font-semibold font-medium mb-1'>{data?.name}</p>
+                    <p className='-mt-1 text-[#FFFFFF] xl:text-lg lg:text-base md:text-lg xl:font-semibold lg:font-medium md:font-semibold mb-1'>{data?.name}</p>
                 </div>
                 <div>
                     <p className='text-[#FFFFFF80] text-sm xl:font-medium'>ROCKET</p>
-                    <p className='-mt-1 text-[#FFFFFF] xl:text-lg xl:font-semibold font-medium mb-1'>{rocketname}</p>
+                    <p className='-mt-1 text-[#FFFFFF] xl:text-lg lg:text-base md:text-lg xl:font-semibold lg:font-medium md:font-semibold mb-1'>{rocketname}</p>
                 </div>
                 <div>
                     <p className='text-[#FFFFFF80] text-sm xl:font-medium'>FLIGHT NUMBER</p>
-                    <p className='-mt-1 text-[#FFFFFF] xl:text-lg xl:font-semibold font-medium mb-1'>{data?.flight_number}</p>
+                    <p className='-mt-1 text-[#FFFFFF] xl:text-lg lg:text-base md:text-lg xl:font-semibold lg:font-medium md:font-semibold mb-1'>{data?.flight_number}</p>
                 </div>
                 <div>
                     <p className='text-[#FFFFFF80] text-sm xl:font-medium'>TIME (UTC)</p>
-                    <p className='-mt-1 text-[#FFFFFF] xl:text-lg xl:font-semibold font-medium xl:w-36 w-32 mb-1'>{formatDate(data?.date_utc)}</p>
+                    <p className='-mt-1 text-[#FFFFFF] xl:text-lg lg:text-base md:text-lg xl:font-semibold lg:font-medium md:font-semibold xl:w-36 lg:w-32 w-36 mb-1'>{formatDate(data?.date_utc)}</p>
                 </div>
                 <div>
                     <p className='text-[#FFFFFF80] text-sm xl:font-medium'>LINKS</p>
                     <div className='flex ml-1'>
                         {data?.links?.wikipedia ? (
-                            <Link to={data?.links?.wikipedia} className='flex bg-white xl:w-6 w-5 xl:h-6 h-5 rounded-full mr-2'>
+                            <Link to={data?.links?.wikipedia} className='flex bg-white xl:w-6 lg:w-5 md:w-6 xl:h-6 lg:h-5 md:h-6 rounded-full mr-2'>
                                 <img src={wiki} alt='wiki' className='p-[0.1rem]' />
                             </Link>
                         ) : (
-                            <div className='flex bg-white xl:w-6 w-5 xl:h-6 h-5 rounded-full mr-2 hover: cursor-not-allowed opacity-25'>
+                            <div className='flex bg-white xl:w-6 lg:w-5 w-6 xl:h-6 lg:h-5 md:h-6 rounded-full mr-2 hover: cursor-not-allowed opacity-25'>
                                 <img src={wiki} alt='wiki' className='p-[0.1rem]' />
                             </div>
                         )}
                         {data?.links?.webcast ? (
-                            <Link to={data?.links?.webcast} className='bg-white xl:w-6 w-5 xl:h-6 h-5 rounded-full mr-2'>
+                            <Link to={data?.links?.webcast} className='bg-white xl:w-6 lg:w-5 md:w-6 xl:h-6 lg:h-5 md:h-6 rounded-full mr-2'>
                                 <img src={youtubeLogo} alt='youtube' className='p-[0.20rem]' />
                             </Link>
                         ) : (
-                            <div className='bg-white xl:w-6 w-5 xl:h-6 h-5 rounded-full mr-2 hover: cursor-not-allowed opacity-25'>
+                            <div className='bg-white xl:w-6 lg:w-5 md:w-6 xl:h-6 lg:h-5 md:h-6 rounded-full mr-2 hover: cursor-not-allowed opacity-25'>
                                 <img src={youtubeLogo} alt='youtube' className='p-[0.20rem]' />
                             </div>
                         )}
                         {data?.links?.reddit?.launch ? (
-                            <Link to={data?.links?.reddit?.launch} className='bg-white xl:w-6 w-5 xl:h-6 h-5 rounded-full mr-2'>
+                            <Link to={data?.links?.reddit?.launch} className='bg-white xl:w-6 lg:w-5 md:w-6 xl:h-6 lg:h-5 md:h-6 rounded-full mr-2'>
                                 <img src={reddit} alt='reddit' className='p-[0.20rem]' />
                             </Link>
                         ) : (
-                            <div className='bg-white xl:w-6 w-5 xl:h-6 h-5 rounded-full mr-2 hover: cursor-not-allowed opacity-25'>
+                            <div className='bg-white xl:w-6 lg:w-5 md:w-6 xl:h-6 lg:h-5 md:h-6 rounded-full mr-2 hover: cursor-not-allowed opacity-25'>
                                 <img src={reddit} alt='reddit' className='p-[0.20rem]' />
                             </div>
                         )}
@@ -85,28 +85,31 @@ const LaunchCard = ({ data }) => {
             </div>
             <div className='xl:ml-14 ml-10'>
                 <div>
+                    {data?.links?.patch?.small?<div>
+                        <p className='text-[#FFFFFF80] text-sm xl:font-medium mb-1'>MISSION PATCH</p>
+                        <div className='flex justify-center items-center bg-[#33333361] xl:h-[8.125rem] h-[6rem] xl:w-[8.125rem] w-[6rem] rounded-2xl'>
+                                <img src={data?.links?.patch?.small} alt='patchLogo' className='xl:w-[5.5rem] lg:w-[5rem] md:w-[6rem] md:mt-4' />
+                        </div>
+                    </div>:<div>
                     <p className='text-[#FFFFFF80] text-sm xl:font-medium mb-1'>ROCKET LOGO</p>
                     <div className='flex justify-center items-center bg-[#33333361] xl:h-[8.125rem] h-[6rem] xl:w-[8.125rem] w-[6rem] rounded-2xl'>
-                        {data?.links?.patch?.small ? (
-                            <img src={data?.links?.patch?.small} alt='patchLogo' className='xl:w-[5.5rem] w-[5rem]' />
-                        ) : (
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Falcon_Heavy_logo.svg/105px-Falcon_Heavy_logo.svg.png" alt='rocketLogo' className='xl:w-20 w-18' />
-                        )}
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Falcon_Heavy_logo.svg/105px-Falcon_Heavy_logo.svg.png" alt='rocketLogo' className='xl:w-20 lg:w-18 md:w-[20rem]' />
                     </div>
-                </div>
+                </div>}
+                    </div>
                 {data?.crew && data?.crew.length > 0 ? (
                     <div>
-                        <p className='text-[#FFFFFF80] text-sm font-medium xl:mt-9 mt-14'>CREW</p>
+                        <p className='text-[#FFFFFF80] text-sm font-medium xl:mt-9 lg:mt-14  md:mt-[4.5rem]'>CREW</p>
                         <div className='flex'>
                             {data.crew.map((i) => (
-                                <img key={i} src={crew} alt='crew' className='xl:w-7 w-5' />
+                                <img key={i} src={crew} alt='crew' className='xl:w-7 lg:w-5 w-6' />
                             ))}
                         </div>
                     </div>
                 ) : (
                     <div>
-                        <p className='text-[#FFFFFF80] text-sm xl:font-medium xl:mt-9 mt-14'>LAUNCHPAD</p>
-                        <p className='-mt-1 text-[#FFFFFF] xl:text-lg xl:font-semibold font-medium'>{launchpadName}</p>
+                        <p className='text-[#FFFFFF80] text-sm xl:font-medium xl:mt-9 lg:mt-14 md:mt-[4.5rem]'>LAUNCHPAD</p>
+                        <p className='-mt-1 text-[#FFFFFF] xl:text-lg lg:text-base md:text-lg xl:font-semibold lg:font-medium md:font-semibold'>{launchpadName}</p>
                     </div>
                 )}
             </div>

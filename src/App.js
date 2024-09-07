@@ -27,7 +27,7 @@ const App = () => {
         <div className='flex xl:hidden lg:hidden justify-between'>
           <div>
             <img src={LOGO_IMG} alt="logo" className='h-7 m-auto' />
-            <p className='font-thin text-sm tracking-[0.45em] mt-1 text-[#FFFFFF]'>
+            <p className='font-thin text-sm tracking-[0.45em] mt-1 md:mb-8 text-[#FFFFFF]'>
               LIVE-INFO
             </p>
           </div>

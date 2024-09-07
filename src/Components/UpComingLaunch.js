@@ -17,8 +17,8 @@ const UpComingLaunch = () => {
   };
 
   return (
-    <div className='xl:w-[26rem] w-[20rem] mt-4 xl:h-[21rem] h-[19rem] xl:ml-5 ml-8 px-6 bg-[#00000080] rounded-2xl drop-shadow-2xl'>
-      <p className='xl:font-bold font-semibold xl:py-6 py-5 text-[#FFFFFF] xl:text-xl text-lg'>Upcoming launch</p>
+    <div className='xl:w-[26rem] lg:w-[20rem] md:w-[21.5rem] mt-4 xl:h-[21rem] lg:h-[19rem] md:h-[21rem] xl:ml-5 ml-8 px-6 bg-[#00000080] rounded-2xl drop-shadow-2xl'>
+      <p className='xl:font-bold lg:font-semibold md:font-bold xl:py-6 py-5 text-[#FFFFFF] xl:text-xl lg:text-lg md:text-xl'>Upcoming launch</p>
       <div className='-mt-4'>
         <LaunchCard data={ upComingData}/>
         </div>
