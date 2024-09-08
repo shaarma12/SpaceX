@@ -5,7 +5,7 @@ const Sidebar = () => {
     return (
         <>
         
-            <div className='xl:w-[22%] lg:w-[22%] md:hidden xl:block lg:block bg-white rounded-tl-2xl rounded-bl-2xl'>
+            <div className='xl:w-[22%] lg:w-[22%] md:hidden hidden xl:block lg:block bg-white rounded-tl-2xl rounded-bl-2xl'>
             <img src={LOGO_IMG} alt="logo" className='xl:h-7 h-5 m-auto mt-20' />
             <p className='font-thin text-sm tracking-[0.45em] ml-7 mt-1'>LIVE-INFO</p>
             <div className='mt-24 text-[#656565] text-2xl ml-5 flex flex-col'>
