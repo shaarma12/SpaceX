@@ -25,9 +25,9 @@ const App = () => {
       )}
 
       <div className='
-        xl:h-screen lg:h-screen md:min-h-screen xl:w-full lg:w-full md:w-full
-        xl:bg-[#EFEFEF] lg:bg-[#EFEFEF] md:bg-[url("https://live.staticflickr.com/7706/26751237322_5a52540ea3_h.jpg")]
-        xl:bg-none lg:bg-none md:bg-cover bg-center bg-120
+        xl:h-screen lg:h-screen md:min-h-screen xl:w-full lg:w-full md:w-full w-[45.3rem] h-[87.2rem]
+        xl:bg-[#EFEFEF] lg:bg-[#EFEFEF] bg-[url("https://live.staticflickr.com/7706/26751237322_5a52540ea3_h.jpg")]
+        xl:bg-none lg:bg-none bg-cover bg-center
         xl:flex xl:justify-center xl:items-center lg:flex lg:justify-center lg:items-center md:p-8
       '>
         <div className='flex xl:hidden lg:hidden justify-between'>
