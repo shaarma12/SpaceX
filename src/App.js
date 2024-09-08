@@ -18,14 +18,14 @@ const App = () => {
             onClick={() => setSidebar(false)}
           ></div>
           <div className='flex'>
-            <img src={wcross} alt='cross' className='absolute left-[32rem] top-8' />
+            <img src={wcross} alt='cross' className='absolute left-[30rem] top-8' />
             <SidebarsMed toggleFn={() => setSidebar()} />
           </div>
         </div>
       )}
 
       <div className='
-        xl:h-screen lg:h-screen md:h-[46rem] xl:w-full lg:w-full md:w-full 
+        xl:h-screen lg:h-screen md:min-h-screen xl:w-full lg:w-full md:w-full
         xl:bg-[#EFEFEF] lg:bg-[#EFEFEF] md:bg-[url("https://live.staticflickr.com/7706/26751237322_5a52540ea3_h.jpg")]
         xl:bg-none lg:bg-none md:bg-cover bg-center bg-120
         xl:flex xl:justify-center xl:items-center lg:flex lg:justify-center lg:items-center md:p-8
