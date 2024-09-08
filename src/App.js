@@ -25,15 +25,15 @@ const App = () => {
       )}
 
       <div className='
-        xl:h-screen lg:h-screen md:min-h-screen xl:w-full lg:w-full md:w-full
-        xl:bg-[#EFEFEF] lg:bg-[#EFEFEF] md:bg-[url("https://live.staticflickr.com/7706/26751237322_5a52540ea3_h.jpg")]
-        xl:bg-none lg:bg-none md:bg-cover bg-center bg-120
+        xl:h-screen lg:h-screen md:min-h-screen xl:w-full lg:w-full md:w-full w-[45.3rem] h-[87.2rem]
+        xl:bg-[#EFEFEF] lg:bg-[#EFEFEF] bg-[url("https://live.staticflickr.com/7706/26751237322_5a52540ea3_h.jpg")]
+        xl:bg-none lg:bg-none bg-cover bg-center
         xl:flex xl:justify-center xl:items-center lg:flex lg:justify-center lg:items-center md:p-8
       '>
-        <div className='flex xl:hidden lg:hidden justify-between'>
+        <div className='flex xl:hidden lg:hidden justify-between md:p-0 p-14'>
           <div>
-            <img src={LOGO_IMG} alt="logo" className='h-7 m-auto' />
-            <p className='font-thin text-sm tracking-[0.45em] mt-1 md:mb-8 text-[#FFFFFF]'>
+            <img src={LOGO_IMG} alt="logo" className='md:h-7 h-14 m-auto' />
+            <p className='font-thin md:text-sm text-2xl md:tracking-[0.45em] tracking-[0.75em] mt-1 md:mb-8 text-[#FFFFFF]'>
               LIVE-INFO
             </p>
           </div>
@@ -42,7 +42,7 @@ const App = () => {
               <img 
                 src={menu} 
                 alt='menu' 
-                className='w-8' 
+                className='md:w-8 md:h-10 w-16 h-14 md:mt-0 mt-6' 
                 onClick={() => setSidebar(true)} 
               />
             )}
